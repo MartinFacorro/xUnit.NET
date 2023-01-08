@@ -46,5 +46,19 @@ namespace Sparky
     }
 
 
+    [Test]
+    [TestCase(11)]
+    [TestCase(13)]
+    [TestCase(15)]
+    public void IsOddNumber_InputOffNumber_ReturnTrue_wParam(int numberA)
+    {
+      Calculator calc = new();
+
+      bool isOdd = calc.IsOddNumber(11);
+
+      Assert.That(isOdd, Is.True);
+    }
+
+
   }
 }
