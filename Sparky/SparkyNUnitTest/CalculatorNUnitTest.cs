@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,5 +24,27 @@ namespace Sparky
       //Assert
       Assert.AreEqual(30, result);
     }
+
+    [Test]
+    public void IsOddNumber_InputEvenNumber_ReturnFalse()
+    { 
+      Calculator calc = new();
+
+      bool isOdd = calc.IsOddNumber(10);
+
+      Assert.That(isOdd, Is.False);
+    }
+
+    [Test]
+    public void IsOddNumber_InputOffNumber_ReturnTrue()
+    {
+      Calculator calc = new();
+
+      bool isOdd = calc.IsOddNumber(11);
+
+      Assert.That(isOdd, Is.True);
+    }
+
+
   }
 }

@@ -6,4 +6,9 @@ public class Calculator
   { 
     return numberA+ numberB;
   }
+
+  public bool IsOddNumber(int numberA) // OddNumber --> NumeroImpar
+  {
+    return numberA % 2 != 0;
+  }
 }
