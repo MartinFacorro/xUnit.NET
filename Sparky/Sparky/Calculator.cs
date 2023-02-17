@@ -2,6 +2,7 @@
 
 public class Calculator
 {
+  public List<int> NumberRange = new();
   public int AddNumber(int numberA, int numberB)
   {
     return numberA + numberB;

@@ -22,5 +22,17 @@ namespace Sparky
       Assert.That(fullName, Does.StartWith("Hello,"));
       Assert.That(fullName, Does.EndWith("Spark"));
     }
+
+    [Test]
+    public void GreetMessage_NotGreeted_ReturnsNull()
+    {
+      // Arrange
+      var customer = new Customer();
+
+      //Act
+
+      //Assert
+      Assert.IsNull(customer.greetMessage);
+    }
   }
 }
