@@ -16,7 +16,6 @@ namespace Sparky
     [Test]
     public void CombineName_InputFirstAndLastName_ReturnFullName()
     {
-
       //Act
       string fullName = customer.GreetAndCombineNames("Ben", "Spark");
 

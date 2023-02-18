@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Sparky
 {
-
   [TestFixture]
   public class CalculatorNUnitTest
   {
@@ -44,7 +37,6 @@ namespace Sparky
 
       Assert.That(isOdd, Is.True);
     }
-
 
     [Test]
     [TestCase(11)]
@@ -84,5 +76,18 @@ namespace Sparky
       Assert.AreEqual(15.9, result, 1);
     }
 
+    [Test]
+    public void OddRanger_InputMinAndMaxRange_ReturnsValidIddNumberRange()
+    {
+      Calculator calc = new();
+
+      List<int> numbers = new() { 5, 7, 9 }; // 5-10
+
+      //Act
+      List<int> result = calc.getOddRange(5, 10);
+
+      //Assert
+      Assert.That(result, Is.EquivalentTo(numbers));
+    }
   }
 }
