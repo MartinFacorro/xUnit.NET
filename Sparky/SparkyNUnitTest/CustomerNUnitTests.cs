@@ -20,12 +20,15 @@ namespace Sparky
       string fullName = customer.GreetAndCombineNames("Ben", "Spark");
 
       //Assert
-      Assert.AreEqual(fullName, "Hello, Ben Spark");
-      Assert.That(fullName, Is.EqualTo("Hello, Ben Spark"));
-      Assert.That(fullName, Does.Contain("ben spark").IgnoreCase);
-      Assert.That(fullName, Does.Contain(","));
-      Assert.That(fullName, Does.StartWith("Hello,"));
-      Assert.That(fullName, Does.EndWith("Spark"));
+      Assert.Multiple(() =>
+      {
+        Assert.AreEqual(fullName, "Hello, Ben Spark");
+        Assert.That(fullName, Is.EqualTo("Hello, Ben Spark"));
+        Assert.That(fullName, Does.Contain("ben spark").IgnoreCase);
+        Assert.That(fullName, Does.Contain(","));
+        Assert.That(fullName, Does.StartWith("Hello,"));
+        Assert.That(fullName, Does.EndWith("Spark"));
+      });
     }
 
     [Test]
