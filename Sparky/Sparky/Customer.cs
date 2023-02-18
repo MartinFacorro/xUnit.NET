@@ -6,10 +6,14 @@
 
     public string greetMessage { get; set; }
 
-    public string GreetAndCombineNames(string? firstName, string? lastName)
+    public string GreetAndCombineNames(string firstName, string lastName)
     {
+      if (String.IsNullOrWhiteSpace(firstName))
+      {
+        throw new ArgumentException("Empty First Name");
+      }
       greetMessage = $"Hello, {firstName} {lastName}";
-      Discount= 20 ;
+      Discount = 20;
       return greetMessage;
     }
   }
