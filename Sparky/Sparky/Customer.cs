@@ -1,16 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sparky
+﻿namespace Sparky
 {
   public class Customer
   {
+    public int Discount = 15;
+
+    public string greetMessage { get; set; }
+
     public string GreetAndCombineNames(string firstName, string lastName)
     {
-      return $"Hello, {firstName} {lastName}";
+      if (String.IsNullOrWhiteSpace(firstName))
+      {
+        throw new ArgumentException("Empty First Name");
+      }
+      greetMessage = $"Hello, {firstName} {lastName}";
+      Discount = 20;
+      return greetMessage;
     }
   }
 }
