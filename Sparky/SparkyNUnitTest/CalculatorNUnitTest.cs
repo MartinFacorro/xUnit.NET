@@ -96,7 +96,6 @@ namespace Sparky
       Assert.That(result, Has.No.Member(6));
       Assert.That(result, Is.Ordered);
       Assert.That(result, Is.Unique);
-
     }
   }
 }
